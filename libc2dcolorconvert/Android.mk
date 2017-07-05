@@ -2,14 +2,14 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := \
-        C2DColorConverter.cpp
-
 LOCAL_C_INCLUDES := \
     $(TOP)/frameworks/av/include/media/stagefright \
     $(TOP)/frameworks/native/include/media/openmax \
-    $(TOP)/hardware/qcom/display/libcopybit \
+    $(TOP)/hardware/qcom/display-${TARGET_QCOM_DISPLAY_VARIANT}/libcopybit \
     $(TARGET_OUT_HEADERS)/qcom/display/
+
+LOCAL_SRC_FILES := \
+        C2DColorConverter.cpp
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
